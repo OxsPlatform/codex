@@ -19,6 +19,7 @@
   - [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
   - [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
   - [Fail Fast](https://en.wikipedia.org/wiki/Fail-fast_system)
+  - [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
 - 
 
 
@@ -36,8 +37,9 @@ will have several issues, when first block latest
 ## Source Control (Git)
 - Check changes **before** commiting.
 - Commit should follow push automatically (no local commits).
+- Before opening/assigning pull request review it yourself, make sure all changes are intentional.
 - Resolve merge conflict manually (you're always responsible of commit's content).
-- Something went wrong when tried to resove conflict - better to stop, discard changes and start from scratch
+- Something went wrong when tried to resove conflict - better to stop, discard changes and start from scratch.
 - 
 
 
@@ -65,6 +67,9 @@ will have several issues, when first block latest
 - Write tests for all new features.
 - Use await-async instead then-catch.
 - Avoid long lines (over chaining) like complex ternaries, chaining of (await function) etc.
-- Avoid oversized try-catch
+- Avoid oversized try-catch.
+- Use separate layers (derived from SoC) for client communications, business logic and connection to database.
+- Avoid cyclic dependency, use tree-shaped architecture.
+- Expose only what actually required (Encapsulation).
 - 
 
