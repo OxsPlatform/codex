@@ -71,5 +71,6 @@ will have several issues, when first block latest
 - Use separate layers (derived from SoC) for client communications, business logic and connection to database.
 - Avoid cyclic dependency, use tree-shaped architecture.
 - Expose only what actually required (Encapsulation).
+- API routes group by http methods and order (with wildcard/parameter aat the end)
 - 
 
