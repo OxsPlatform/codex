@@ -72,5 +72,6 @@ will have several issues, when first block latest
 - Avoid cyclic dependency, use tree-shaped architecture.
 - Expose only what actually required (Encapsulation).
 - API routes group by http methods and order (with wildcard/parameter aat the end)
+- const > let > var
 - 
 
