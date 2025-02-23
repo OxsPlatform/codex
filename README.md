@@ -37,10 +37,12 @@ will have several issues, when first block latest
 ## Source Control (Git)
 - Check changes **before** commiting.
 - Commit should follow push automatically (no local commits).
-- Before opening/assigning pull request review it yourself, make sure all changes are intentional.
 - Resolve merge conflict manually (you're always responsible of commit's content).
 - Something went wrong when tried to resove conflict - better to stop, discard changes and start from scratch.
-- 
+- Before opening/assigning pull request review it yourself, make sure all changes are intentional.
+- Don't disregard remarks.
+- After applying changes, replying to remarks re-request review. 
+
 
 
 ## Code Formatting
