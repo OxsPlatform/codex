@@ -6,7 +6,8 @@
 3. [Source Control](#source-control-git)
 4. [Code Formatting](#code-formatting)
 5. [Naming Conventions](#naming-conventions)
-6. [Best Practices](#best-practices)
+6. [Coding](#coding)
+7. [Data Base](#data-base)
 
 
 ## General Principles
@@ -20,7 +21,9 @@
   - [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
   - [Fail Fast](https://en.wikipedia.org/wiki/Fail-fast_system)
   - [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
-- 
+- Understand -> Design -> Develop -> Test -> Understand..
+- Write tests for all new features.
+- Organize imports (remove not used).
 
 
 ## Workflow
@@ -31,7 +34,6 @@ adopt "design first approach" [or waterfall](https://en.wikipedia.org/wiki/Water
 - Feature that can't be deployed in one step (for example need preparation before and clean up after)
 will have several issues, when first block latest
 - Each issue will have feature branch named after issue in Jira
-- 
 
 
 ## Source Control (Git)
@@ -41,8 +43,7 @@ will have several issues, when first block latest
 - Something went wrong when tried to resove conflict - better to stop, discard changes and start from scratch.
 - Before opening/assigning pull request review it yourself, make sure all changes are intentional.
 - Don't disregard remarks.
-- After applying changes, replying to remarks re-request review. 
-
+- After applying changes, replying to remarks re-request review.
 
 
 ## Code Formatting
@@ -54,7 +55,7 @@ will have several issues, when first block latest
   "semi": false,
   "singleQuote": true
 }
-- 
+- Sort imports
 
 
 ## Naming Conventions
@@ -62,18 +63,21 @@ will have several issues, when first block latest
 - Use PascalCase for class names.
 - Use UPPER_CASE for global constants.
 - Don't mix cases
-- 
 
 
-## Best Practices
-- Write tests for all new features.
+## Coding
 - Use await-async instead then-catch.
 - Avoid long lines (over chaining) like complex ternaries, chaining of (await function) etc.
 - Avoid oversized try-catch.
 - Use separate layers (derived from SoC) for client communications, business logic and connection to database.
 - Avoid cyclic dependency, use tree-shaped architecture.
 - Expose only what actually required (Encapsulation).
-- API routes group by http methods and order (with wildcard/parameter aat the end)
+- API routes group by http methods and order (with wildcard/parameter at the end)
 - const > let > var
-- 
 
+
+## Data Base
+- Write simple and clear queries (KISS).
+- Avoid mongodb transaction if possinble.
+- If using mongodb transaction - don't execute parallel queries.
+- Model.insertMany > Model.create([
