@@ -74,6 +74,28 @@ will have several issues, when first block latest
 - Expose only what actually required (Encapsulation).
 - API routes group by http methods and order (with wildcard/parameter at the end)
 - const > let > var
+- No need if-else statement in case if has return/throw
+### ✅
+
+```js
+if (condition) {
+    ...
+    return;
+}
+```
+
+### ❌
+
+```js
+if (condition) {
+    ...
+    return;
+} else {
+    ...
+}
+```
+  
+- ...
 
 
 ## Data Base
